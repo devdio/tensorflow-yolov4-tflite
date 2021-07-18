@@ -43,7 +43,11 @@ def main(img_path):
 
     result = cv2.cvtColor(np.array(result), cv2.COLOR_RGB2BGR)
     cv2.imwrite('result.png', result)
-
+    
+    cv2.imshow("result", result)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+    
 if __name__ == '__main__':
     img_path = './data/kite.jpg'
     main(img_path)
